@@ -1,0 +1,882 @@
+/*css en general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;/*estilo del texto*/
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+
+.padre {
+    display: flex; /*la pagina flexible*/
+    flex-flow: column nowrap;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+ul {
+    list-style-type: none; 
+}
+.cuerpo {
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/*****************************************************************************************
+
+pagina principal
+
+**************************************************************************************************/
+
+
+    /**encabezado*/
+    .encabezado {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row nowrap;
+        
+        padding-top: 0.3rem;
+    }
+        /***logo del encabezado*/
+        .logo {
+            width: 12.5%;
+        }
+            .logo img {
+                width: 100%;
+                height: auto;
+            }
+
+        /***menu del encabezado*/
+        .nag {
+            width: 87.5%;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 0.5em;
+            margin: 0 auto;
+            background-color: rgb(73, 73, 73);
+            border-radius: 0.5em;
+            padding-left: 1em;
+            margin-right: 0.3em;
+        }
+            .nag ul {
+                text-transform: uppercase;
+            }
+                .nag ul li{
+                    font-size: 20px;
+                    display:inline-block;
+                    vertical-align: middle;
+                }
+                    .nag ul li a{
+                        display: block;
+                        margin-right: 0.7em;
+                        text-decoration: none;
+                        font-size: large;
+                        font-weight: 700;
+                        transition-duration: 0s;
+                        transition-property: border;
+                    }
+                        .nag ul li a:hover {
+                            border-bottom: 2px solid rgb(0,212,255);
+                        }
+
+        /***buscador del encabezado*/
+
+        .buscar {
+                background-color: rgb(42, 43, 44);
+                display: flex;
+                align-items: center;
+                position: relative;
+                border-radius: 0.5em;
+                overflow: hidden;
+            }
+                .buscar input {
+                    width: 15rem;
+                    flex: 1;
+                    border: 0;
+                    padding: 0.5rem 0.7rem;
+                    outline: 0;
+                    font-size: large;
+                    background: transparent;
+                    color: aliceblue;
+                }
+                /*imagen/boton del buscador*/
+                    .buscar button img {
+                        width: 1.8rem;
+                    }
+                    .buscar button {
+                        padding: 0.5rem 0.8rem;
+                        border: 0;
+                        outline: 0;
+                        background: transparent;
+                        cursor: pointer;
+                    }
+            
+        /***inicio sesion en la parte derecha del menu de encabezado*/
+        .sesion {
+            flex-grow: 2;
+        }
+        .sesion ul{
+                text-transform: uppercase;
+                text-align: right;
+            }
+                .sesion ul li{
+                    font-size: 20px;
+                    display:inline-block;
+                    vertical-align: middle;
+                }
+                    .sesion ul li a{
+                        color: rgb(255, 252, 252);
+                        display: block;
+                        margin-right: 0.7em;
+                        text-decoration: none;
+                        font-size: large;
+                        font-weight: 700;
+                    }
+                    .sesion ul li a img {
+                        width: 2.8rem;
+                    }
+
+    /**fin encabezado*/
+
+    /**articulos*/
+
+    .articulos {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    /*el estilo del titulo de cada seccion de articulo*/
+    .titulos {
+        margin: 1em 0;
+        display: flex;
+        justify-content: space-between;
+    }
+        /*boton para mostrar mas con scrip*/
+        .titulos form {
+            background-color: rgb(42, 43, 44);
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 0.5em;
+            overflow: hidden;
+        }
+            .titulos form input {
+                flex: 1;
+                border: 0;
+                padding: 0.5rem 0.7rem;
+                outline: 0;
+                font-size: medium;
+                background: transparent;
+                color: aliceblue;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+        /***destacados y reconmendados*********/
+
+        .destacados {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: rgb(73, 73, 73);
+            align-items: center;
+        }
+            /*video de la izq*/
+            .destacados article{
+                width: 75%;
+                height: 40rem;
+            }
+                .destacados article video{
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                }
+            .destacados aside {
+                width: 25%;
+                background-color: rgb(73, 73, 73);
+            }
+            /*descricion del video*/
+            .titulo {
+                margin: 1rem;
+            }
+                .titulo h2{
+                    font-size: xx-large;
+                }
+                .titulo h3 {
+                    font-size: x-large;
+                }
+
+        /***ofertass******/
+
+        .ofertas {
+            display: flex;
+            justify-content: space-between; /*que cada div este separados a la misma distancia ocupando toda la caja*/
+            flex-flow: row nowrap;
+            align-items: center;
+            overflow: hidden; /*que no apareca nada fuera de la caja ni barras de navegacion*/
+        }
+            .ofertas div {
+                height: auto;
+                background-color: rgba(136, 136, 136, 0.582);
+
+            }
+                .ofertas div img{
+                    width: 300px;
+                    height: 168px;
+                }
+                .ofertas div p {
+                    text-align: right;
+                }
+            .ofertas div p::after { /*añadir el euro despues de cada p*/
+                content: "€";
+                width: 1rem;
+            }
+    /**fin de articulos*/
+    /**pie de pagina**********/
+        
+    footer hr { /*linea de separacion entre cuerpo y pie de pagina*/
+        margin: 0 auto;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(240, 248, 255, 0.185);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    /*lista de iconos de las redes*/
+    .redes ul li{
+        display:inline-block;
+    }
+        .redes ul li a{
+            display: block;
+        }
+            .redes ul li a img{
+                width: 1.8rem;
+                height: 1.8rem;
+                margin: 0.5em;
+                margin-left: 0;
+            }
+    .pie {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        }
+        /*lista de toda la informacion del pie de pagina*/
+        .pie ul li {
+            vertical-align: middle;
+            margin: 0.5em 0;
+        }
+            .pie ul li a  {
+                color: rgb(180, 170, 170);
+                vertical-align: middle;
+            }
+
+/*fin pagina home***********/
+
+/********************************************************************************************************
+
+comienzo pagina explorar
+
+********************************************************************************************************/
+
+    /**generos*****/
+    
+    .generos {          
+        display: flex;      /*la caja sea flexible*/
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        align-items: center;
+        overflow: hidden;
+    }
+        .generos div {
+            height: auto;
+            background-color: rgb(78, 78, 78);
+            padding: 1em;
+            border-radius: 0.3em;
+        }
+        /*estilo de la imagen*/
+        .generos div img{
+            border-radius: 0.3em;
+            width: 300px;
+            height: 168px;
+            box-shadow: 0 0 15px rgb(0, 0, 0);
+            transition: 0.5s; /*una transicion que dura 0.5s si hay transformacion*/
+        }
+        /*estilo de cada genero*/
+        .generos div p {
+            text-align: center;
+            font-size: x-large;
+            text-transform: uppercase;
+        }
+        .generos div img:hover {
+            transform: scale(1.1); /*que una transformacion de escala*/
+        }
+
+    /**cuerpo del explorador*********/
+
+    .cuerpo_explorar {
+        display: flex;
+        flex-flow: row-reverse nowrap; /*lo ordena al reves en horizontal*/
+        margin: 2em 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+        /***menu del explorador************/
+
+        .menu_juegos {
+            width: 18%;
+        }
+       
+        .menu_juegos hr{        /*espacio entre cada seccion del menu del explorador a la derecha*/
+            background-color: rgb(255, 255, 255, 0.5);
+            margin: 0.5rem 0;
+        }   
+            .filtros {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+            }   
+                .filtros p {
+                    font-size: medium;
+                }
+                /*boton de restablecer los filtros*/
+                #Restablecer {
+                    background: transparent;
+                    color: aliceblue;
+                    border: 0;
+                    text-transform: uppercase;
+                }
+
+            /****buscador del filtro reutilizando la clase buscar y adaptandolo****/
+
+            .menu_juegos .buscar{
+                width: 100%;
+                border-radius: 0.3rem;
+            }
+                .menu_juegos .buscar input {
+                    width: 1rem;
+                    font-size: medium;
+                    padding: 0.4rem 0.5rem;
+                }
+                .menu_juegos .buscar button {
+                    padding: 0.4rem 0.5rem;
+                }
+                    .menu_juegos .buscar button img{
+                        width: 1.5rem;
+                    }
+
+            /****rango de los precios*********/
+
+            .rango_precio {
+            width: 100%;
+            margin: 0.5rem 0;
+            }
+                .rango_precio p {
+                    text-transform: capitalize;
+                }
+                /*tamaño de la barra de los precios*/
+                .rango_precio  input {
+                    width: 100%;
+                }
+
+            /****menu desplegable de los filtros*********/
+
+            .menu_generos {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+                /*lista de generos*/
+                .menu_generos ul {
+                    text-transform: capitalize;
+                    margin:0;
+                    padding:0;
+                }
+                    .menu_generos ul li{
+                        font-size: medium;
+                    }
+                    .menu_generos ul a {
+                        display:block;
+                        text-decoration:none;
+                        font-size:medium;
+                        padding:10px;
+                        text-transform:capitalize;
+                        letter-spacing:1px;
+                    }
+                    /*sub listas*/
+                    .menu_generos ul ul {
+                        display:none;/*para esconder el bloque*/
+                        top:100%;
+                        left:0;
+                        padding:0;
+                    }
+                    .menu_generos ul ul li {
+                        font-size: medium;
+                    }
+                    .menu_generos ul ul a {
+                        padding: 0.5em 1em;
+                    }
+                    /*al poner el raton aparece el submenu o sublista*/
+                    .menu_generos ul li:hover > ul {
+                        display:block;/*para que aparezca el bloque*/
+                    }
+
+        /***fin del menu del explorador**********/
+
+        /***cuerpo de juegos*******************/
+
+        /*estilo del select de ordenar los articulos*/
+        .seccion {
+            width: 82%;
+        }
+            .select p {
+                font-size: large;
+                text-transform: uppercase;
+                color: rgb(150, 150, 150);
+            }
+                .select p select {
+                    font-size: large;
+                    width: min-content;/*con la anchura minima*/
+                    background-color: rgb(0, 0, 0);
+                    color:aliceblue;
+                    border: none;
+                }
+        /*caja que contiene los juegos*/
+        .todojuegos {
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap; /*para que cuando la caja sobrepase el ancho de la caja que lo contiene vaya a la siguiente linea*/
+            justify-content: flex-start;
+            gap: 1em; /*separacion entre cajas*/
+            margin: 0.5rem 0;
+        }
+            /*tamaño de cada juego*/
+            .juego .contiene {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.3rem;
+                padding: 0.5em;
+                transition: 0.5s; /*una transicion que dura 0.5s si hay transformacion*/
+            }
+                .juego .contiene img {
+                    width: 260px;
+                }
+                .juego .contiene h3{
+                    text-transform: capitalize;
+                    margin: 0.5em 0;
+                }
+                .juego .contiene h2::after {/*detras de caja h2 añadir el €*/
+                    content: "€";
+                    width: 1rem;
+                }
+            .juego .contiene:hover{
+                transform: scale(1.1); /*que una transformacion de escala*/
+            }
+
+        /***fin del cuerpo de juegos********/
+    
+    /**fin del cuerpo explorador*****/
+
+/*fin pagina explorar***************************************/
+
+/********************************************************************************************
+
+comienzo pagina noticia
+
+**********************************************************************************************/
+
+    /**top noticias en grande****************/
+    .noticias_top{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        gap: 1%;
+        margin-bottom: 1rem;
+    }
+        .noticias_top article {
+            width: 50%;
+        }
+            .noticias_top article div img {
+                width: 100%;
+                border-radius: 0.2rem;
+            }
+
+            /***partes de una noticia*************/
+            .time {
+                text-transform: uppercase;
+                color: rgb(180, 170, 170);
+            }
+            .texto {
+                color: rgb(180, 170, 170);
+            }
+            .enunciado {
+                margin: 0.3em 0;
+                font-size: large;
+                font-weight: 500;
+            }
+    
+    /**fin del noticias en grande***********/
+    /**todas las noticias*****************/
+
+    .noticias {
+        width: 100%;
+        height: 125px;
+        display: flex;
+        flex-flow: column;
+    }
+    .cuerpo_noticia {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+        .cuerpo_noticia .imagen {
+            display: flex;
+            width: 15%;
+            height: 100%;
+            overflow: hidden;
+        }
+            .cuerpo_noticia .imagen img {
+                width: 100%;
+                height: 100%;
+            }
+
+        /***enlaces de pagina siguientes con listas**********/
+        .pagina {
+            display: flex;
+            justify-content: center;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 0.5em;
+        }
+            .pagina ul {
+                text-transform: uppercase;
+            }
+                .pagina ul li{
+                    font-size: 20px;
+                    display:inline-block;
+                    vertical-align: middle;
+                }
+                    .pagina ul li a{
+                        display: block;
+                        text-decoration: none;
+                        font-size: large;
+                        color: rgb(255, 255, 255, 0.7);
+                    }
+    /**fin de todas las noticias*****/
+
+/*Fin de pagina noticias*/
+
+/*************************************************************************************************************
+
+pagina de inicio de sesion
+
+*************************************************************************************************************/
+
+    /**fondo de la pagina**/
+    .inicio_sesion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./imagenes/ktc-opengraph-blog-gaming-cloud-gaming-advantages-disadvantages.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        min-height: 100vh; 
+        box-shadow: 0 0 10em rgba(0, 0, 0, 0.315) inset;/*el sombreado de la caja es interior*/
+    }
+
+    /**caja de inicio sesionen el centro de la pagina***/
+
+    .isesion {
+        align-self: center;
+        background-color: rgb(25, 27, 27);
+        border-radius: 0.5rem;
+        width: 20%;
+        padding-top: 3em;
+        padding-bottom: 1.7em;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    /**formulario del inicio sesion**/
+
+    .div_sesion {
+        width: 70%;
+    }
+        .isesion ul li{
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+            .isesion ul li input , .isesion ul li label{
+                font-size: large;
+            }
+
+        /***formulario **/
+        #email , #contrasena {
+            width: 100%;
+        }
+            .isesion ul li input {
+                background-color: rgba(160, 160, 160, 0.1);
+                color: aliceblue;
+                border: 0;
+                padding: 0.3rem 0.5rem;
+                border-radius: 0.2rem;
+            }
+               .isesion ul li input:hover {
+                    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.205) inset; /*añadir una sombra interior a la caja cuando pasa el raton*/
+                }
+    
+    .isesion .logo {/*reutilizando el .logo*/
+        width: 60%;
+    }
+    /*boton de iniciar sesion*/
+    #iniciar {
+        margin-top: 1rem;
+        text-align: center;
+    }
+        #iniciar input {
+            background: rgb(0,212,255);
+            background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(58,58,255,1) 100%);/*color bonito para que resalte*/
+        }
+            .isesion ul li p {
+                text-align: center;
+                margin: 1rem 0;
+            }
+                #regis { /*enlace de Registrar*/
+                    color: #00d4ff;
+                    font-size: large;
+                }
+/*fin pagina de iniciar sesion*/
+
+/*************************************************************************************
+
+pagina de registrarse
+
+*************************************************************************************/
+/*reutilizando clases del inicio sesion*/
+/*centrar el formulario*/
+.iregistrar {
+    align-self: center;
+    background-color: rgb(25, 27, 27);
+    border-radius: 0.5rem;
+    width: 25%;
+    padding-top: 3em;
+    padding-bottom: 1.7em;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+    /*adaptando el logo*/
+    .iregistrar .logo {
+        width: 50%;
+    }
+    .registrar {
+        width: 75%;
+    }
+        .registrar ul li{
+            margin: 1rem 0;
+            width: 100%;
+        }
+            .registrar ul li input , .registrar ul li label , .registrar select{ /*que tenga el mismo tamaño de letra*/
+                font-size: large;
+            }
+                .registrar ul li input , .registrar select { /*el mismo estilo*/
+                    background-color: rgba(160, 160, 160, 0.1);
+                    color: aliceblue;
+                    border: 0;
+                    padding: 0.3rem 0.5rem;
+                    border-radius: 0.2rem;
+                }
+                    .registrar ul li input:hover {
+                        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.205) inset; /*añadir una sombra interior a la caja cuando pasa el raton*/
+                    }
+    /*nombre y apellido en la misma linea*/
+    .nombre {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        }
+        .nombre div {
+            width: 48%;
+        }
+            .nombre div input ,.nombre div select{
+                width: 100%;
+            }
+            .nombre div select option { /*la letra dentro del select se vea en negro*/
+                color: black;
+            }
+            .registrar iframe { /*que el iframe ocupe el 100% de la caja que lo contiene*/
+                width: 100%;
+            }
+
+/*fin pagina registrar*/
+/***********************************************************************************************
+
+pagina elden ring
+
+*********************************************************************************************************/
+    /**contenedor*/
+    .producto {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: rgba(133, 133, 133, 0.103);
+        justify-content: space-between;
+    }
+        .carro_imagenes {
+            width: 70%;
+            display: flex;
+            flex-flow: column nowrap;
+            background-color: black;
+        }
+            /*iframe*/
+            .carro_imagenes iframe{
+                width: 100%;
+                height: 60vh;
+            }
+                /*carro de imagenes*/
+                .cimagen {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    overflow-y: hidden;
+                }
+                    .cimagen div img{
+                        width: 10rem;
+                        height: auto;
+                    }
+        /*estilo de la valoracion del juego*/
+        .producto aside {
+            width: 28%;
+        }
+            .producto .titulo {
+                margin: 0;
+                width: 100%;
+            }
+                .producto .titulo img {
+                    width: 100%;
+                }
+                .producto .titulo h3 {
+                    font-size: large;
+                    font-weight: 500;
+                }
+                .producto .titulo p {
+                    font-size: medium;
+                    text-transform: uppercase;
+                    margin: 1em 0;
+                }
+                    .producto .titulo p a {
+                        color: rgb(127, 229, 255);
+                    }
+                    .producto .titulo p span {
+                        color: rgb(180, 180, 180);
+                    }
+    /**contiene la descripcion*/
+    .content_juego {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 2em;
+    }
+        /*tamaño de la descripcion*/
+        .descripcion {
+            width: 70%;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+            .descripcion article {
+                margin: 1REM 0;
+            }
+                /*estilo de la compra*/
+                .compra {
+                    background: rgb(0,212,255);
+                    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(58,58,255,1) 100%);;
+                    padding: 1rem;
+                    text-align: right;
+                    border-radius: 0.3rem;
+                }
+                /*estilo del video*/
+                .gif {
+                    height: 40vh;
+                    overflow: hidden; /*no aparezca barra de navegacion*/
+                    align-items: center;
+                    display: flex;
+                }
+                    .gif video {
+                        width: 100%;
+                    }
+                /*estilo lista de caracteristicas*/
+                .caracteristicas {
+                    list-style: circle; 
+                    color: aliceblue;
+                    margin-left: 1rem;
+                    margin-top: 1rem;
+                }
+                    .caracteristicas li {
+                        margin: 1rem 0;
+                    }
+            /*tabla de requisitos*/
+            .requisitos table{
+                width: 100%;
+                border-collapse: separate; /*para que los bordes esten separados*/
+                border-spacing: 0 1rem; /*espacio de separacion entre bordes*/
+            }
+                .requisitos table tr{
+                    height: 10px;
+                }
+                .requisitos table th{
+                    text-transform:uppercase;
+                    text-align: left;
+                    font-weight: 550;
+                }
+                .requisitos table td {
+                    font-size: medium;
+                }
+                    .requisitos table td span {
+                        color: rgb(180, 180, 180);
+                    }
+        /**contenedor de la iqz*/
+        .descripcion_izq {
+            width: 28%;
+            margin-top: 1em;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 2rem;
+        }
+            .descripcion_izq aside div{
+                align-self: center;
+                background-color: rgba(133, 133, 133, 0.24);
+                padding: 1rem 1rem;
+                padding-bottom: 0.3em;
+            }
+                /*tabla de idiomas*/
+                .descripcion_izq table {
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    border-collapse: collapse;
+                }
+                    /*estilo de la letra y bordes*/
+                    .descripcion_izq table tr td{
+                        border: 1px solid rgba(163, 163, 163, 0.39);
+                        width: 33.33%;
+                        text-transform: capitalize;
+                    }
+                    /*tamaño de los iconos de tick y cruz*/
+                    .descripcion_izq table tr td img {
+                        width: 25px;
+                    }

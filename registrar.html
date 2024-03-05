@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="inicio_sesion">
+      <!--formulario-->
+        <form action="" class="iregistrar"> 
+          <!--logo-->
+             <div class="logo"><a href="./home.html"><img src="./imagenes/impact-removebg-preview.png" alt=""></a></div>
+             <!--formulario ordenado en listas-->
+             <div class="registrar">
+                 <ul>
+                    <li>
+                      <div class="nombre">
+                        <div>
+                          <!--nombre obligatorio-->
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" id="" name="user_nombre" required>
+                        </div>
+                        <div>
+                          <!--apellido obligatorio-->
+                          <label for="apellido">Apellido:</label><br>
+                          <input type="text" id="" name="user_apellido" required>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="nombre">
+                      <div>
+                        <!--fecha obligatorio-->
+                        <label for="date">Fecha de nacimiento:</label><br>
+                        <input type="date" name="user_date" id="" required>
+                      </div>
+                      <div>
+                        <!--select de paises obligatorio-->
+                        <label for="Pais">Pais</label><br>
+                          <select name="Pais" required>
+                            <option value="0"></option>
+                            <option>España</option>
+                            <option>Francia</option>
+                            <option>China</option>
+                          </select>
+                      </div>
+                      </div>
+                    </li>
+                    <!--correo obligatorio-->
+                     <li>
+                       <label for="email">Correo electrónico:</label><br>
+                       <input type="email" id="email" name="user_email" required>
+                     </li>
+                     <li>
+                    <!--confirmar correo obligatorio-->
+                      <label for="email">Confirmar correo electrónico:</label><br>
+                      <input type="email" id="email" name="user_email" required>
+                    </li>
+                    <!--contraseña obligatorio-->
+                     <li>
+                       <label for="contrasena">Contraseña:</label><br>
+                       <input type="password" name="user_contrasena" id="contrasena" required>
+                     </li>
+                     <!--confirmar contraseña obligatorio-->
+                     <li>
+                      <label for="contrasena">Confirmar contraseña:</label><br>
+                      <input type="password" name="user_contrasena" id="contrasena" required>
+                    </li>
+                    <!--iframe con las politicas-->
+                    <li>
+                      <iframe src="./politica.html" frameborder="0"></iframe>
+                    </li>
+                    <!--casilla de aceptar obligatorio-->
+                     <li>
+                       <input type="checkbox" name="casilla" required>
+                       <label for="cas">Acepto los <a href="">terminos del servicio.</a></label>
+                     </li>
+                     <!--boton de registrar-->
+                     <li id="iniciar">
+                       <input type="button" value="Registrar" >
+                     </li>
+              </div>
+         </form>  
+ </div>
+</body>
+</html>

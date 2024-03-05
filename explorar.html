@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explorar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="logo"><a href="./home.html"><img src="./imagenes/impact-removebg-preview.png" alt=""></a></div>
+            <!--navegador-->
+            <div class="nag">
+                <nav >
+                    <ul>
+                        <li><a href="./home.html">tienda</a></li>
+                        <li><a href="./explorar.html">explorar</a></li>
+                        <li><a href="./noticias.html">Noticias</a></li>
+                        <li><a href="">Comunidad</a></li>
+                        <li><a href="">tienda de puntos</a></li>
+                    </ul>
+                </nav>
+                <!--inicio de sesion-->
+                <div class="sesion">
+                    <ul>
+                        <li><a href=""><img src="./imagenes/icon/icons8-mundo-64.png" alt=""></a></li>
+                        <li><a href="./sesion.html"><img src="./imagenes/icon/icons8-usuario-masculino-en-círculo-64.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <!--buscador-->
+                <form class="buscar">
+                    <input type="text" placeholder="Escribe">
+                    <button type="submit"><img src="./imagenes/icon/icons8-lupa-50.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+    </header>
+        <div class="cuerpo">
+            <!--cuerpo------------------------------------------------------------------------------>
+            <section>
+                <div class="articulos">
+                    <!--generos de juegos------------------------------------------------------------------------------>
+                    <div class="titulos">
+                        <h2>Generos populares</h2>
+                        <!--boton para ver mas-->
+                        <form>
+                            <input type="button" value="ver mas">
+                        </form>
+                    </div>
+                    <article class="generos">
+                        <!--cada genero en una caja-->
+                        <div>
+                            <a href="">
+                            <img src="./imagenes/game/1366_2000.jpg" alt="">
+                            <p>accion</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                            <img src="./imagenes/game/images.jpg" alt="">
+                            <p>disparos</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                            <img src="./imagenes/game/descarga.jpg" alt="">
+                            <p>carreras</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                            <img src="./imagenes/game/elden-ring-key-art.webp" alt="">
+                            <p>casuales</p>
+                            </a>
+                        </div>
+                    </article>
+                    <!--cuerpo de explorador--------------------------------------------------------------------------------------->
+                    <div class="cuerpo_explorar">
+                        <!--menu del explorador---------------------------------------------------------------------------------------->
+                        <aside class="menu_juegos">
+                            <div class="filtros">
+                                <div><p>Filtros</p></div>
+                                <!--boton de restablecer-->
+                                <form>
+                                    <input type="button" value="Restablecer" id="Restablecer">
+                                </form>
+                            </div>
+                            <!--buscador-->
+                            <form class="buscar">
+                                <input type="text" placeholder="Escribe">
+                                <button type="submit"><img src="./imagenes/icon/icons8-lupa-50.png" alt=""></button>
+                            </form>
+                            <div class="rango_precio">
+                                <p>precio</p>
+                                <form>
+                                    <!--barra de max de precio con range-->
+                                    <input type="range" list="precio" min="0" max="8" />
+                                        <datalist id="precio">
+                                        <option value="1" label="0"></option>
+                                        <option value="2" label="10"></option>
+                                        <option value="3" label="20"></option>
+                                        <option value="4" label="30"></option>
+                                        <option value="5" label="40"></option>
+                                        <option value="6" label="50"></option>
+                                        <option value="7" label="60"></option>
+                                        <option value="8" label="Cualquier Precio"></option>
+                                        </datalist>
+                                </form>
+                            </div>
+                            <hr>
+                            <!--menu desplegable de generos con listas y sub listas-->
+                            <div class="menu_generos">
+                                <ul>
+                                    <li>Generos
+                                        <hr>
+                                        <ul>
+                                            <li><a href="">accion</a></li>
+                                            <li><a href="">carreras</a></li>
+                                            <li><a href="">disparos</a></li>
+                                            <li><a href="">casual</a></li>
+                                            <li><a href="">aventuras</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--menu desplegable de categorias con listas y sub listas-->
+                            <div class="menu_generos">
+                                <ul>
+                                    <li>Categorias
+                                        <hr>
+                                        <ul>
+                                            <li><a href="">accion</a></li>
+                                            <li><a href="">carreras</a></li>
+                                            <li><a href="">disparos</a></li>
+                                            <li><a href="">casual</a></li>
+                                            <li><a href="">aventuras</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--menu desplegable de plataformas con listas y sub listas-->
+                            <div class="menu_generos">
+                                <ul>
+                                    <li>Plataformas
+                                        <hr>
+                                        <ul>
+                                            <li><a href="">MAC</a></li>
+                                            <li><a href="">WINDOWS</a></li>
+                                            <li><a href="">LINUX</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <!--fin menu del explorador---------------------------------------------------------------------------------------->
+                        <!--articulos del explorador---------------------------------------------------------------------------------------->
+                        <article class="seccion">
+                            <div class="select">
+                                <form>
+                                <p>mostrar: 
+                                <!--select para ordenar los articulos-->
+                                <select name="menu">
+                                    <option>Todos</option>
+                                    <option>Nuevo lanzamiento</option>
+                                    <option>Proximamente</option>
+                                    <option>Orden alfabetico</option>
+                                    <option>Precio:de mas alto a mas bajo</option>
+                                    <option>Precio:de mas bajo a mas alto</option>
+                                  </select>
+                                </p>
+                                </form>
+                            </div>
+                            <!--contenedor de articulos-->
+                            <div class="todojuegos">
+                                <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/elden-ring-key-art.webp" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/descarga (1).jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/descarga.jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/1366_2000.jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="./imagenes/game/images.jpg">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/descarga.jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/descarga (1).jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                                 <!--contenedor de imagen y precio de cada juego-->
+                                <div class="juego">
+                                    <a href="">
+                                    <div class="contiene">
+                                        <img src="./imagenes/game/images.jpg" alt="">
+                                        <h3>elden ring</h3>
+                                        <h2>59</h2>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+             <!--pie de pagina--------------------------------------------------------------------->
+             <footer>
+                <hr>
+                <!--lista horizontal-->
+                <div class="redes">
+                    <h3>Redes</h3>
+                    <ul>
+                    <li><a href=""><img src="imagenes/icon/icons8-facebook-nuevo-30.png" alt=""></a></li>
+                    <li><a href=""><img src="./imagenes/icon/icons8-youtube-26.png" alt=""></a></li>
+                    <li><a href=""><img src="./imagenes/icon/icons8-instagram-30.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <!--lista vertical-->
+                <div class="pie">
+                    <div class="nosotros">
+                        <h3>Nosotros</h3>
+                        <ul>
+                            <li><a href="">Sobre nosotros</a></li>
+                            <li><a href="">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="ayuda">
+                        <h3>Ayuda</h3>
+                        <ul>
+                            <li><a href="">Contacto con nosotros</a></li>
+                            <li><a href="">Mi cuenta</a></li>
+                        </ul>
+                    </div>
+                    <div class="privacidad">
+                        <h3>Privacidad</h3>
+                        <ul>
+                        <li><a href="">Terminos de servicio tienda</a></li>
+                        <li><a href="">Politica de privacidad</a></li>
+                        <li><a href="">Politica de reembolso de la tienda</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
